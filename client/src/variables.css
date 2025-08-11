@@ -1,0 +1,46 @@
+:root {
+  /** Layouts **/
+  --layout-mobile: 375px;
+  --layout-desktop: 1440px;
+
+  /** Colours **/
+  --clr-dark-grey: #2e2e2e;
+  --clr-dark: #0c0202;
+  --clr-very-light-grey:#e0e0e0;
+  --clr-yellow3: #f9cd2f;
+  --clr-yellow2: #f2ea52;
+  --clr-green: #3b7f3b;
+  --clr-green2:#1d914a;
+  --clr-green3:hsl(151, 88%, 19%);
+  --clr-dark-green: #2f3e2e;
+  --clr-white: #ffffff;
+  --clr-gray: #f5f5f5;
+  --clr-red: #f44336;
+  --clr-dark-red: #c62828;
+
+
+  
+  /* Background gradients */
+  --background: linear-gradient(90deg, #1dce3e, #f0fff5);
+  --background: radial-gradient(circle, rgb(112, 154, 75) 0%, rgb(33, 62, 3) 100%);
+  --background: linear-gradient(90deg, hsla(46, 73%, 75%, 1) 0%, hsla(176, 73%, 88%, 1) 100%);
+
+  --background1: rgba(255, 255, 255, 0.2);
+ 
+  /* Badge style */
+  --background-color: rgba(247, 5, 5, 0.986);
+  --clr-yellow1: #c8b919;
+
+  /* UI styles */
+  --radius: 8px;
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  /** Typography **/
+  --font-paragraph: 16px; 
+  --fw-regular: 400;
+  --fw-bold: 700;
+
+  --font-main: 'Inter', sans-serif;
+  --font-fancy: 'Pinyon Script', cursive;
+  --font-hand: 'Edu SA Hand', cursive;
+}

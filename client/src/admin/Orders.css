@@ -1,0 +1,109 @@
+.orders-wrapper {
+  padding: 20px;
+}
+
+.orders-wrapper h2{
+  text-align: center;
+  color: var(--clr-green3);
+  font-family: 'Georgia', serif;
+  padding: 2px;
+}
+
+.orders-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.orders-table th,
+.orders-table td {
+  border: 1px solid var(--clr-dark-grey);
+  padding: 4px;
+  text-align: center;
+}
+
+.orders-table th {
+  background-color: var(--clr-green2);
+  color: white;
+  font-weight: bold;
+}
+
+.orders-table tr:nth-child(even) {
+  background-color: var(--clr-very-light-grey);
+}
+
+.orders-table tr:hover {
+  background-color: var(--clr-white);
+}
+
+.orders-table button {
+  background-color: var(--clr-red);
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  font-size: 0.85rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.orders-table button:hover {
+  background-color: var(--clr-dark-red);
+}
+
+.status-message {
+  color: var(--clr-red);
+  margin-top: 10px;
+}
+
+
+/* ✅ Mobile adaptation */
+@media (max-width: 600px) {
+  table {
+    font-size: 0.5rem;
+    width: 100%;
+  }
+
+  th, td {
+    padding: 6px 8px;
+    text-align: left;
+    word-break: break-word;
+  }
+
+  .admin-buttons {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .admin-buttons button,
+  .admin-buttons a {
+    width: 100%;
+    font-size: 0.5rem;
+    padding: 10px;
+  }
+
+  .status-message {
+    font-size: 0.9rem;
+  }
+
+  h2, h3 {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .dashboard-header {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .dashboard-header button {
+    width: 100%;
+    font-size: 0.5rem;
+  }
+
+  .dashboard-section {
+    padding: 20px 10px;
+  }
+}

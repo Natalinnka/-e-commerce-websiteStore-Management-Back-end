@@ -1,0 +1,44 @@
+.admin-dashboard {
+  padding: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.admin-title {
+  text-align: center;
+  font-family: 'Georgia', serif;
+  color: hsl(151, 88%, 19%);
+  margin-bottom: 20px;
+}
+
+.admin-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+}
+
+.admin-tabs button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  background-color: hsl(151, 58%, 40%);
+  color: white;
+  transition: 0.3s;
+}
+
+.admin-tabs button:hover {
+  background-color: hsl(151, 58%, 32%);
+}
+
+.admin-tabs .active {
+  background-color: hsl(151, 88%, 19%);
+}
+
+.admin-content {
+  margin-top: 20px;
+}
+

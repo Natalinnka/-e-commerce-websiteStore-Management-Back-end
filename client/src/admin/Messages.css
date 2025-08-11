@@ -1,0 +1,94 @@
+ .messages-wrapper {
+  padding: 20px;
+}
+
+.messages-wrapper h2{
+  text-align: center;
+  color: var(--clr-green3);
+  font-family: 'Georgia', serif;
+  padding: 2px;
+}
+
+.messages-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.messages-table th,
+.messages-table td {
+  border: 1px solid var(--clr-dark-grey);
+  padding: 5px;
+  text-align: center;
+}
+
+.messages-table th {
+    background-color: var(--clr-green2);
+  color: white;
+  font-weight: bold;
+}
+
+.messages-table tr:nth-child(even) {
+  background-color: var(--clr-very-light-grey);
+}
+
+.messages-table tr:hover {
+  background-color: var(--clr-white);
+}
+
+.status-message {
+  color: var(--clr-red);
+  margin-top: 10px;
+}
+
+.messages-table button {
+  background-color: var(--clr-red); 
+  color: white;
+  border: none;
+  padding: 4px 8px;
+  font-size: 0.85rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.messages-table button:hover {
+  background-color: var(--clr-dark-red); 
+}
+
+
+/* ✅ Mobile adaptation */
+@media (max-width: 600px) {
+  table {
+    font-size: 0.5rem;
+    width: 100%;
+  }
+
+  th, td {
+    padding: 8px 6px;
+    text-align: left;
+    word-break:break-all;
+  }
+
+  .admin-buttons {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .admin-buttons button,
+  .admin-buttons a {
+    width: 100%;
+    font-size: 0.5rem;
+    padding: 10px;
+  }
+
+  .status-message {
+    font-size: 0.9rem;
+  }
+
+  h2, h3 {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+}

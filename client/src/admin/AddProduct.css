@@ -1,0 +1,109 @@
+/* Wrapper */
+.add-product-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 0px;
+  padding-bottom: 40px;
+
+}
+
+/* Form styling */
+.add-product-form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0px;
+  gap: 5px;
+  width: 100%;
+  max-width: 400px; /* Limit width for better UX */
+  background: var(--background1);
+  backdrop-filter: blur(6px);
+  padding: 15px 25px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Form title */
+.add-product-form h2 {
+  text-align: center;
+  font-family: 'Georgia', serif;
+  color: var(--clr-green3);
+  margin-bottom: 1px;
+}
+
+/* Inputs and select */
+.add-product-form input[type="text"],
+.add-product-form input[type="number"],
+.add-product-form select {
+  width: 100%;
+  padding: 7px;
+  font-size: 0.95rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  appearance: none;
+}
+
+.add-product-form input:focus,
+.add-product-form select:focus {
+  border-color: hsl(151, 88%, 19%);
+  box-shadow: 0 0 5px hsl(151, 88%, 30%);
+}
+
+/* File input */
+.add-product-form input[type="file"] {
+  font-size: 0.9rem;
+}
+
+/* Checkboxes */
+.add-product-form label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+/* Button */
+.add-product-form button {
+  padding: 10px 0;
+  font-size: 0.95rem;
+  font-weight: bold;
+  background: hsl(151, 58%, 40%);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.add-product-form button:hover {
+  background: hsl(151, 58%, 32%);
+}
+
+/* Status message */
+.status-message {
+  text-align: center;
+  margin-top: 5px;
+  font-weight: bold;
+}
+
+/* ✅ Mobile adaptation */
+@media (max-width: 600px) {
+  .add-product-form {
+    max-width: 90%;
+    padding: 20px 15px;
+  }
+
+  .add-product-form input,
+  .add-product-form select {
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+
+  .add-product-form button {
+    padding: 10px 0;
+    font-size: 0.9rem;
+  }
+}
+
+
