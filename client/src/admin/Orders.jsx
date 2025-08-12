@@ -11,7 +11,9 @@ const Orders = () => {
   const fetchOrders = async () => {
     try {
       setLoading(true)
-      const res = await fetch('http://localhost:10000/api/orders')
+      const API_URL = import.meta.env.VITE_API_URL || ''
+      const url = API_URL ? `${API_URL}/api/orders` : '/api/orders'
+      const res = await fetch(url)
       if (!res.ok) throw new Error('Failed to fetch orders')
       const data = await res.json()
       setOrders(data)
@@ -28,7 +30,9 @@ const Orders = () => {
     if (!window.confirm('Are you sure you want to delete this order?')) return
 
     try {
-      const res = await fetch(`http://localhost:10000/api/orders/${id}`, {
+      const API_URL = import.meta.env.VITE_API_URL || ''
+      const url = API_URL ? `${API_URL}/api/orders/${id}` : `/api/orders/${id}`
+      const res = await fetch(url, {
         method: 'DELETE'
       })
       if (res.ok) {
@@ -59,7 +63,13 @@ const Orders = () => {
         <table className="orders-table">
           <thead>
             <tr>
-              <th>ID</th><th>Customer</th><th>Total</th><th>Status</th><th>Items</th><th>Created</th><th>Actions</th> {/* ✅ Added for delete */}
+              <th>ID</th>
+              <th>Customer</th>
+              <th>Total</th>
+              <th>Status</th>
+              <th>Items</th>
+              <th>Created</th>
+              <th>Actions</th>
             </tr>
           </thead>
           <tbody>

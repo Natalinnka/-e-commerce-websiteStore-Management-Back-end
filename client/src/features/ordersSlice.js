@@ -18,7 +18,9 @@ export const placeOrder = createAsyncThunk( 'orders/placeOrder',
 
       const order = { buyerName, items, total }
 
-      const res = await fetch('http://localhost:10000/api/orders', {
+      const API_URL = import.meta.env.VITE_API_URL || ''
+      const url = API_URL ? `${API_URL}/api/orders` : '/api/orders'
+      const res = await fetch(url, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(order)

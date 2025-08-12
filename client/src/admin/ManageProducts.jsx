@@ -12,7 +12,9 @@ const ManageProducts = () => {
   const fetchProducts = async () => {
     try {
       setLoading(true)
-      const res = await fetch('http://localhost:10000/api/products')
+      const API_URL = import.meta.env.VITE_API_URL || ''
+      const url = API_URL ? `${API_URL}/api/products` : '/api/products'
+      const res = await fetch(url)
       const data = await res.json()
       setProducts(data)
     } catch (err) {
@@ -27,7 +29,9 @@ const ManageProducts = () => {
     if (!window.confirm('Are you sure you want to delete this product?')) return
 
     try {
-      const res = await fetch(`http://localhost:10000/api/products/${id}`, {
+      const API_URL = import.meta.env.VITE_API_URL || ''
+      const url = API_URL ? `${API_URL}/api/products/${id}` : `/api/products/${id}`
+      const res = await fetch(url, {
         method: 'DELETE'
       })
 
@@ -48,8 +52,10 @@ const ManageProducts = () => {
     if (!editingProduct) return
 
     try {
+      const API_URL = import.meta.env.VITE_API_URL || ''
+      const url = API_URL ? `${API_URL}/api/products/${editingProduct.id}` : `/api/products/${editingProduct.id}`
       const res = await fetch(
-        `http://localhost:10000/api/products/${editingProduct.id}`,
+        url,
         {
           method: 'PUT',
           headers: { 'Content-Type': 'application/json' },
@@ -182,5 +188,4 @@ const ManageProducts = () => {
 }
 
 export default ManageProducts
-
 

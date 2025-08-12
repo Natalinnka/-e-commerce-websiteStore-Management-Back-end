@@ -37,12 +37,14 @@ const AddProduct = () => {
       category,
       stock: parseInt(stock),
       image,
-      sugarFree, // ✅ use state directly
-      noBake     // ✅ use state directly
+      sugarFree,
+      noBake
     }
 
     try {
-      const res = await fetch('http://localhost:10000/api/products', {
+      const API_URL = import.meta.env.VITE_API_URL || ''
+      const url = API_URL ? `${API_URL}/api/products` : '/api/products'
+      const res = await fetch(url, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(newProduct),

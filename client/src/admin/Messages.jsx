@@ -11,7 +11,9 @@ const Messages = () => {
   const fetchMessages = async () => {
     try {
       setLoading(true)
-      const res = await fetch('http://localhost:10000/api/messages')
+      const API_URL = import.meta.env.VITE_API_URL || ''
+      const url = API_URL ? `${API_URL}/api/messages` : '/api/messages'
+      const res = await fetch(url)
       if (!res.ok) throw new Error('Failed to fetch messages')
       const data = await res.json()
       setMessages(data)
@@ -28,7 +30,9 @@ const Messages = () => {
     if (!window.confirm('Are you sure you want to delete this message?')) return
 
     try {
-      const res = await fetch(`http://localhost:10000/api/messages/${id}`, {
+      const API_URL = import.meta.env.VITE_API_URL || ''
+      const url = API_URL ? `${API_URL}/api/messages/${id}` : `/api/messages/${id}`
+      const res = await fetch(url, {
         method: 'DELETE'
       })
       if (res.ok) {

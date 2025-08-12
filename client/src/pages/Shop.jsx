@@ -27,7 +27,10 @@ const Shop = () => {
       if (sort === 'price-asc') params.append('sort', 'price_asc')
       if (sort === 'price-desc') params.append('sort', 'price_desc')
 
-      const response = await fetch(`/api/products?${params.toString()}`)
+      // Fetch products from API
+      const API_URL = import.meta.env.VITE_API_URL || ''
+      const url = API_URL ? `${API_URL}/api/products?${params.toString()}` : `/api/products?${params.toString()}`
+      const response = await fetch(url)
       const data = await response.json()
       setProducts(data)
     } catch (error) {

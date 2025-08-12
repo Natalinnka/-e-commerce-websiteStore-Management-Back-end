@@ -6,7 +6,9 @@ export const sendMessage = createAsyncThunk(
   'messages/sendMessage',
   async ({ name, email, message }, thunkAPI) => {
     try {
-      const res = await fetch('http://localhost:10000/api/messages', {
+      const API_URL = import.meta.env.VITE_API_URL || ''
+      const url = API_URL ? `${API_URL}/api/messages` : '/api/messages'
+      const res = await fetch(url, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ name, email, message })
