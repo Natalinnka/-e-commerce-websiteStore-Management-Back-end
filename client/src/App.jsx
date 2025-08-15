@@ -1,8 +1,8 @@
+// Imports
 import { useEffect } from 'react'
 import { useDispatch } from 'react-redux'
-import { fetchProducts } from './features/productSlice'
-
 import { Routes, Route } from 'react-router-dom'
+import { fetchProducts } from './features/productSlice'
 
 import Navbar from './components/Navbar'
 import Landing from './pages/Landing'

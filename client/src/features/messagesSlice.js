@@ -1,4 +1,4 @@
-// client/src/features/messagesSlice.js
+// Imports
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 
 // POST new message (for public site contact form)

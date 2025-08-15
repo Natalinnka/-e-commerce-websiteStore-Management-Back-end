@@ -37,7 +37,6 @@ router.post('/', async (req, res) => {
   }
 });
 
-
 // DELETE /api/orders/:id
 router.delete('/:id', async (req, res) => {
   try {

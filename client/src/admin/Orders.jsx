@@ -1,4 +1,4 @@
-// Orders.jsx
+// Imports
 import { useEffect, useState } from 'react'
 import './Orders.css'
 

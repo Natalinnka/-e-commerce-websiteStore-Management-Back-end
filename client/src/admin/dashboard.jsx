@@ -4,7 +4,7 @@ import AddProduct from './AddProduct'
 import ManageProducts from './ManageProducts'
 import Orders from './Orders'
 import Messages from './Messages'
-import './dashboard.css' // styles
+import './dashboard.css' 
 
 const Dashboard = () => {
   // Track active tab
